@@ -4,8 +4,7 @@ Converts GIF files to ASCII art easily
 <img width="840" height="669" alt="image" src="https://github.com/user-attachments/assets/1c562578-6c90-46de-8711-c86de1492a31" />
 
 
-
-## How to install and run
+## How to Install
 
 ### Step 1:
 clone the repository
@@ -32,5 +31,14 @@ run gui.py
 python3 .\gui.py
 ```
 
+## How to use
 
+### Step 1:
+Select "File > Open" and open gif file
+
+### Step 2:
+After file has loaded, select "File > Convert to GIF"
+
+### Step 3:
+Choose name of new gif file and save.
 
