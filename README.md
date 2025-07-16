@@ -1,7 +1,7 @@
 # gif2ASCII
 Converts GIF files to ASCII art easily
 
-<img width="840" height="669" alt="image" src="https://i.imgur.com/ZFjIQRG.gif" />
+<img width="500" height="398" alt="image" src="https://i.imgur.com/ZFjIQRG.gif" />
 
 
 ## How to Install
