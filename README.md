@@ -1,6 +1,9 @@
 # gif2ASCII
 Converts GIF files to ASCII art easily
 
+<img width="840" height="669" alt="image" src="https://github.com/user-attachments/assets/eb1bc247-c527-4fbf-91ee-0c1469636ce5" />
+
+
 ## How to install and run
 
 ### Step 1:
