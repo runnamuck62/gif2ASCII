@@ -68,7 +68,7 @@ class QImageViewer(QMainWindow):
         self.progress_dialog.setLayout(layout)
         self.progress_dialog.setModal(True)
 
-        #Create thread for GIF conversion process
+        #Create thread for GIF conversion worker
         self.worker = ConversionWorker(self.fileName, fileName_out)
         self.thread = QThread()
         self.worker.moveToThread(self.thread)

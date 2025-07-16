@@ -3,9 +3,7 @@ import numpy as np
 import os
 from PIL import Image, ImageFont, ImageDraw
 
-
-
-  
+#Process GIF frames and return all frame values and GIF FPS
 def process_frames(file):
     #Get all the Frames from the GIF, resize them, and convert to grayscale
     gif = cv2.VideoCapture(file)
@@ -27,6 +25,7 @@ def process_frames(file):
     gif.release()
     return frames, ms_per_frame
 
+#Convert grayscale value to ASCII char
 def pixel_to_char(value):
     chars = [
         "$","8","#","h","p","Z","L","Y","v","r","/","/",")","[","_",
@@ -35,9 +34,8 @@ def pixel_to_char(value):
     idx = min(value // 15, len(chars) - 1)
     return chars[idx]
 
-
+#Convert grayscale frames to ASCII art
 def convert_to_ascii(frames):
-    #Convert every frame to ASCII art
     text_frames = []
     for frame in frames:
         pixels = []
@@ -49,7 +47,8 @@ def convert_to_ascii(frames):
             pixels.append(row_pixels)
         text_frames.append(pixels)
     return text_frames
-    
+
+#Draw ASCII text to image for GIF creation    
 def convert_to_img(text_frames):
     
     padding_top = 5
@@ -58,10 +57,7 @@ def convert_to_img(text_frames):
     padding_right = 5
 
     gif_frames = []
-    
-    import os
-
-    
+       
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     FONT_PATH = os.path.join(BASE_DIR, "fonts", "UbuntuMono-B.ttf")
 
@@ -100,8 +96,8 @@ def convert_to_img(text_frames):
 
     return gif_frames
 
-def save_as_gif(gif_frames, ms_per_frame, output):
-    #Convert all frames to gif file   
+#Convert all frames to gif file  
+def save_as_gif(gif_frames, ms_per_frame, output): 
     frame_one = gif_frames[0]
     frame_one.save(output, format="GIF", append_images=gif_frames[1:], save_all=True, duration=ms_per_frame, loop = 0)
 
