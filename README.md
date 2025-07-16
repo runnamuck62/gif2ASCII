@@ -10,7 +10,6 @@ clone the repository
 Install the dependencies in requirements.txt
 ```
 pip install -r requirements.txt
-
 ```
 ### Step 3:
 run gui.py
